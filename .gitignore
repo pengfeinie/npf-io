@@ -1,0 +1,5 @@
+/.idea/codeStyles
+/.idea
+/npf-bio/target/classes/com/niepengfei/io/*.class
+/*.iml
+/npf-bio/npf-bio.iml
