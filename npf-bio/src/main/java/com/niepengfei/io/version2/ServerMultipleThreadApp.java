@@ -1,4 +1,4 @@
-package com.niepengfei.io;
+package com.niepengfei.io.version2;
 
 import org.apache.commons.io.IOUtils;
 

@@ -7,8 +7,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
+ *
+ *
  * <p>
- * 服务端启动类
+ * 服务端启动类, 一个线程处理所有的连接请求
  * </p>
  *
  * @author Jack
