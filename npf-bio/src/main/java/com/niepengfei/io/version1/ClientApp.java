@@ -1,4 +1,4 @@
-package com.niepengfei.io;
+package com.niepengfei.io.version1;
 
 import java.io.OutputStream;
 import java.net.InetSocketAddress;

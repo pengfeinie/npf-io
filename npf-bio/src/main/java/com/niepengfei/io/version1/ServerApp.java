@@ -1,4 +1,4 @@
-package com.niepengfei.io;
+package com.niepengfei.io.version1;
 
 import org.apache.commons.io.IOUtils;
 import java.io.InputStream;
@@ -16,12 +16,19 @@ import java.net.Socket;
  * @since 1/3/2020
  */
 public class ServerApp {
+
     private static byte[] buffer = new byte[1024];
+
     public static void main(String[] args) throws Exception{
+        //socket() = 6fd
+        //bind(6fd,8080)
+        //listen(fd)
         ServerSocket serverSocket = new ServerSocket(8080);
+
         while (true) {
             System.out.println("等待连接....");
             //在这里会发生阻塞, 等待客户端来连
+            //accept(6fd) = 7fd
             Socket clientSocket = serverSocket.accept();
             System.out.println("已经建立连接");
             System.out.println("等待客户端的数据....");
