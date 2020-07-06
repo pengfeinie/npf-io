@@ -1,27 +1,33 @@
 package com.niepengfei.io.version2;
 
 import org.apache.commons.io.IOUtils;
-
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
  * <p>
- * 服务端启动类
+ * 服务端启动类, 每连接对应一个线程
  * </p>
  *
  * @author Jack
  * @version 1.0.0
  * @since 1/3/2020
  */
-public class ServerMultipleThreadApp {
+public class ServerApp {
+
     public static void main(String[] args) throws Exception{
+
         byte[] buffer = new byte[1024];
+        //socket() = 6fd
+        //bind(6fd,8080)
+        //listen(fd)
         ServerSocket serverSocket = new ServerSocket(8080);
+
         while (true) {
             System.out.println("等待连接....");
             //在这里会发生阻塞, 等待客户端来连
+            //accept(6fd) = 7fd
             Socket clientSocket = serverSocket.accept();
             System.out.println("已经建立连接");
             System.out.println("等待客户端的数据....");
