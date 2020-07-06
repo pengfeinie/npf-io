@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 有什么问题？ 每循环都要去循环clientSocketList,存在用户空间与内核空间的反复切换. 假设clientSocketList非常大，性能极差。
+ *
  * @author Jack
  * @version 1.0.0
  * @since 1/11/2020
