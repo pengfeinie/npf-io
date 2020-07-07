@@ -7,6 +7,9 @@ import java.nio.channels.SocketChannel;
 import java.util.concurrent.TimeUnit;
 
 /**
+ *
+ * 无法处理多个客户端
+ *
  * @author Jack
  * @version 1.0.0
  * @since 1/11/2020
