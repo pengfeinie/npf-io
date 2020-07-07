@@ -39,10 +39,7 @@ public class ServerNioApp {
                 //如果客户端有发送数据过来,那么自然会读取到
                 //如果客户端没有发送数据过来,那么read方法立即返回,不会阻塞
                 clientSocket.configureBlocking(false);
-                int read = clientSocket.read(buffer);
-                if (read > 0) {
-                    System.out.println(new String(buffer.array()));
-                }
+                clientSocket.read(buffer);
             }
         }
     }
