@@ -34,6 +34,7 @@ public class ServerNioApp {
             if (clientSocket == null) {
                 System.out.println("null........");
             } else {
+                System.out.println("新客户端 ：" + clientSocket.getRemoteAddress());
                 //设置读取客户端发送过来的数据的动作是非阻塞的
                 //如果客户端有发送数据过来,那么自然会读取到
                 //如果客户端没有发送数据过来,那么read方法立即返回,不会阻塞

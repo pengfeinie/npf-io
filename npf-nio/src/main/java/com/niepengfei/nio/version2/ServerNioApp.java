@@ -42,6 +42,7 @@ public class ServerNioApp {
                     }
                 }
             } else {
+                System.out.println("新客户端 ：" + clientSocket.getRemoteAddress());
                 clientSocket.configureBlocking(false);
                 clientSocketList.add(clientSocket);
                 List<SocketChannel> clientList = new ArrayList<>(clientSocketList);
