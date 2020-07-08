@@ -40,13 +40,12 @@ public class ServerNioApp {
                         ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
                         client.register(selector,SelectionKey.OP_READ,byteBuffer);
                         System.out.println("新客户端: " + client.getRemoteAddress());
+                        iterator.remove();
                     } else if(key.isReadable()){
                         SocketChannel channel = (SocketChannel)key.channel();
                         ByteBuffer attachment = (ByteBuffer)key.attachment();
-                        int read = channel.read(attachment);
-                        if (read > 0) {
-                            System.out.println(new String(attachment.array()));
-                        }
+                        channel.read(attachment);
+                        iterator.remove();
                     }
                 }
             }
