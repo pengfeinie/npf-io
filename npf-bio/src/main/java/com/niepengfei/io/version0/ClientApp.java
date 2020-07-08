@@ -20,6 +20,6 @@ public class ClientApp {
         Socket socket = new Socket();
         socket.connect(new InetSocketAddress(8080));
         OutputStream outputStream = socket.getOutputStream();
-        outputStream.write("hello world".getBytes());
+        outputStream.write("hello world \n".getBytes());
     }
 }
